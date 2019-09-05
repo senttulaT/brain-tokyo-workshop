@@ -117,6 +117,7 @@ class DataGatherer():
       evalString = 'self.' + gStatLabel[i] + '[:,None]'
       genStats = np.hstack((genStats, eval(evalString)))
     lsave(pref + '_stats.out', genStats)
+    print(genStats)
     # ------------------------------------------------------------------------ 
 
 
@@ -157,7 +158,7 @@ class DataGatherer():
 def lsave(filename, data):
   """Short hand for numpy save with csv and float precision defaults
   """
-  np.savetxt(filename, data, delimiter=',',fmt='%1.2e')
+  #np.savetxt(filename, data, delimiter=',',fmt='%1.2e')
 
 
 
