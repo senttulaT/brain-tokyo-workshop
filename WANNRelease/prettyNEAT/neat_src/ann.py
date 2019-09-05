@@ -300,7 +300,7 @@ def weightedRandom(weights):
 
 def exportNet(filename,wMat, aVec):
   indMat = np.c_[wMat,aVec]
-  np.savetxt(filename, indMat, delimiter=',',fmt='%1.2e')
+  #np.savetxt(filename, indMat, delimiter=',',fmt='%1.2e')
 
 def importNet(fileName):
   ind = np.loadtxt(fileName, delimiter=',')
