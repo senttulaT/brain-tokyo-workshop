@@ -103,15 +103,8 @@ class DataGatherer():
     """Save algorithm stats to disk
     """
     ''' Save data to disk '''
-    print(genStats)
-    print()
-    print(self.spec_fit)
-    print()
-    print(self.objVals)
-    return #######################################################################################
     filename = self.filename
-    import os
-    print(os.getcwd())
+    
     pref = filename
 
     # --- Generation fit/complexity stats ------------------------------------ 
@@ -128,26 +121,28 @@ class DataGatherer():
 
 
     # --- Best Individual ----------------------------------------------------
-    wMat = self.best[gen].wMat
-    aVec = self.best[gen].aVec
-    exportNet(pref + '_best.out',wMat,aVec)
-    
-    if gen > 1:
-      folder = 'log/' + filename + '_best/'
-      if not os.path.exists(folder):
-        os.makedirs(folder)
-      exportNet(folder + str(gen).zfill(4) +'.out',wMat,aVec)
+    #wMat = self.best[gen].wMat
+    #aVec = self.best[gen].aVec
+    #exportNet(pref + '_best.out',wMat,aVec)
+    #
+    #if gen > 1:
+    #  folder = 'log/' + filename + '_best/'
+    #  if not os.path.exists(folder):
+    #    os.makedirs(folder)
+    #  exportNet(folder + str(gen).zfill(4) +'.out',wMat,aVec)
     # ------------------------------------------------------------------------
 
 
     # --- Species Stats ------------------------------------------------------
     if self.p['alg_speciate'] == 'neat':
+      print(self.spec_fit)
       lsave(pref + '_spec.out', self.spec_fit)
     # ------------------------------------------------------------------------
 
 
     # --- MOO Fronts ---------------------------------------------------------
     if self.p['alg_probMoo'] > 0:
+      print(self.objVals)
       lsave(pref + '_objVals.out',self.objVals)
     # ------------------------------------------------------------------------
 
