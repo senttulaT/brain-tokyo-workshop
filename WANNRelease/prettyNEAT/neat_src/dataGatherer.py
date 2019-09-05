@@ -104,7 +104,7 @@ class DataGatherer():
     """
     ''' Save data to disk '''
     filename = self.filename
-    pref = '/databricks/driverlog/' + filename
+    pref = '/databricks/driver/log/' + filename
 
     # --- Generation fit/complexity stats ------------------------------------ 
     gStatLabel = ['x_scale',\
