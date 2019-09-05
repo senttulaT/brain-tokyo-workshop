@@ -103,6 +103,7 @@ class DataGatherer():
     """Save algorithm stats to disk
     """
     ''' Save data to disk '''
+    return #######################################################################################
     filename = self.filename
     import os
     print(os.getcwd())
