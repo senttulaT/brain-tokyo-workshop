@@ -103,6 +103,11 @@ class DataGatherer():
     """Save algorithm stats to disk
     """
     ''' Save data to disk '''
+    print(genStats)
+    print()
+    print(self.spec_fit)
+    print()
+    print(self.objVals)
     return #######################################################################################
     filename = self.filename
     import os
