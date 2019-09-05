@@ -59,12 +59,12 @@ def gatherData(data,neat,gen,hyp,savePop=False):
     data = checkBest(data)
     data.save(gen)
 
-  if savePop is True: # Get a sample pop to play with in notebooks    
-    global fileName
-    pref = 'log/' + fileName
-    import pickle
-    with open(pref+'_pop.obj', 'wb') as fp:
-      pickle.dump(neat.pop,fp)
+  #if savePop is True: # Get a sample pop to play with in notebooks    
+  #  global fileName
+  #  pref = 'log/' + fileName
+  #  import pickle
+  #  with open(pref+'_pop.obj', 'wb') as fp:
+  #    pickle.dump(neat.pop,fp)
 
   return data
 
