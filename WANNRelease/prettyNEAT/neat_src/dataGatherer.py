@@ -161,7 +161,14 @@ def lsave(filename, data):
   """Short hand for numpy save with csv and float precision defaults
   """
   #np.savetxt(filename, data, delimiter=',',fmt='%1.2e')
-
+  with open("/dbfs/tmp/"+filename, 'w') as f:
+    for row in data:
+      for i, cell in enumerate(row):
+        f.write(str(np.round(cell, 2)))
+        if i-1 != len(row):
+          f.write(",")
+      f.write("\n")
+    
 
 
 
