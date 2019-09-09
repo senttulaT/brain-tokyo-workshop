@@ -300,7 +300,7 @@ def weightedRandom(weights):
 
 def exportNet(filename,wMat, aVec):
   indMat = np.c_[wMat,aVec]
-  filename = "/dbfs/tmp/" + filename
+  #filename = "/dbfs/tmp/" + filename
   print(filename, "##########################")
   np.savetxt(filename, indMat, delimiter=',',fmt='%1.2e')
 
