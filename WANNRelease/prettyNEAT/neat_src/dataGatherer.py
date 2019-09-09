@@ -121,15 +121,15 @@ class DataGatherer():
 
 
     # --- Best Individual ----------------------------------------------------
-    #wMat = self.best[gen].wMat
-    #aVec = self.best[gen].aVec
-    #exportNet(pref + '_best.out',wMat,aVec)
-    #
-    #if gen > 1:
-    #  folder = 'log/' + filename + '_best/'
-    #  if not os.path.exists(folder):
-    #    os.makedirs(folder)
-    #  exportNet(folder + str(gen).zfill(4) +'.out',wMat,aVec)
+    wMat = self.best[gen].wMat
+    aVec = self.best[gen].aVec
+    exportNet(pref + '_best.out',wMat,aVec)
+    
+    if gen > 1:
+      folder = 'log/' + filename + '_best/'
+      if not os.path.exists(folder):
+        os.makedirs(folder)
+      exportNet(folder + str(gen).zfill(4) +'.out',wMat,aVec)
     # ------------------------------------------------------------------------
 
 
